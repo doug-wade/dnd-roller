@@ -17,6 +17,6 @@ if (argv.d || argv.dice) {
 } else if (argv.h || argv.help) {
   printUsage();
 } else {
-  console.error("Error: did not recognize options: " + argv);
+  console.error("Error: did not recognize options: " + JSON.stringify(argv));
   printUsage();
 }
