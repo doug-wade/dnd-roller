@@ -1,6 +1,6 @@
 ## Usage
 
-A simple dungeons and dragons dice roller.
+A simple command-line dice roller for dungeons and dragons.
 
 ## Installation
 To install:
