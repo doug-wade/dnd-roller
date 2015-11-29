@@ -1,0 +1,33 @@
+{
+  "name": "dnd-roller",
+  "version": "0.0.2",
+  "description": "A dice roller and character creator for dungeons and dragons pathfinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "bin": {
+    "dnd": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/prekolna/dnd-roller.js.git"
+  },
+  "keywords": [
+    "dnd",
+    "dungeons",
+    "dragons",
+    "dice",
+    "roller"
+  ],
+  "author": "Doug Wade doug@dougwade.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prekolna/dnd-roller.js/issues"
+  },
+  "homepage": "https://github.com/prekolna/dnd-roller.js#readme",
+  "dependencies": {
+    "dice.js": "^0.8.0",
+    "minimist": "^1.2.0"
+  }
+}
