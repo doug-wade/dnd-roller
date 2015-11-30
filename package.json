@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/prekolna/dnd-roller.js.git"
+    "url": "git+ssh://git@github.com/prekolna/dnd-roller.git"
   },
   "keywords": [
     "dnd",
@@ -23,9 +23,9 @@
   "author": "Doug Wade doug@dougwade.io",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prekolna/dnd-roller.js/issues"
+    "url": "https://github.com/prekolna/dnd-roller/issues"
   },
-  "homepage": "https://github.com/prekolna/dnd-roller.js#readme",
+  "homepage": "https://github.com/prekolna/dnd-roller#readme",
   "dependencies": {
     "dice.js": "^0.8.0",
     "minimist": "^1.2.0"

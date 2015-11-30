@@ -10,4 +10,12 @@ To install:
 ## Usage
 To use:
 
-    dnd -d "1d20 + 7"
+    dnd roll "1d20 + 7"
+    
+Get help:
+
+    dnd help
+    
+Import a new character sheet:
+
+    dnd import myCharacter.json
