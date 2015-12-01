@@ -1,6 +1,6 @@
 {
   "name": "dnd-roller",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A simple command-line dice roller for dungeons and dragons",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/prekolna/dnd-roller#readme",
   "dependencies": {
     "dice.js": "^0.8.0",
+    "inquirer": "^0.11.0",
     "minimist": "^1.2.0"
   }
 }

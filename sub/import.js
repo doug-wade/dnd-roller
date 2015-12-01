@@ -1,12 +1,17 @@
-"use strict";
+'use strict';
 
-var fs = require("fs");
-var path = require("path");
+var fs = require('fs');
+var path = require('path');
 
-module.exports = function(argv) {
+/**
+ * Imports a character.
+ * Usage:
+ *      dnd import /path/to/file.json
+ */
+module.exports = function (argv) {
   var filepath = argv._[1];
   var filename = path.basename(filepath);
-  var charactersDirectory = "characters";
+  var charactersDirectory = 'persist/characters';
   var dest = path.join(charactersDirectory, filename);
 
   if (!fs.existsSync(charactersDirectory)) {
