@@ -14,7 +14,7 @@ module.exports = function (argv) {
   var charactersDirectory = 'persist/characters';
   var dest = path.join(charactersDirectory, filename);
 
-  if (!fs.existsSync(charactersDirectory)) {
+  if (!fs.accessSync(charactersDirectory, fs.F_OK)) {
     fs.mkdirSync(charactersDirectory);
   }
 
