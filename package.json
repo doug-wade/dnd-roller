@@ -4,7 +4,8 @@
   "description": "A simple command-line dice roller for dungeons and dragons",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "build": "sub",
+    "watch": "chokidar -c 'npm run build' sub/*.js"
   },
   "bin": {
     "dnd": "./index.js"
