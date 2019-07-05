@@ -4,7 +4,9 @@
   "description": "A simple command-line dice roller for dungeons and dragons",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "dnd": "./index.js"
@@ -29,6 +31,8 @@
   "dependencies": {
     "dice.js": "^0.9.0",
     "inquirer": "^1.2.2",
-    "minimist": "^1.2.0"
-  }
+    "minimist": "^1.2.0",
+    "snyk": "^1.192.0"
+  },
+  "snyk": true
 }
