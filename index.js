@@ -1,34 +1,29 @@
 #!/usr/bin/env node
 
-'use strict';
+import { Command } from 'commander';
 
-var argv = require('minimist')(process.argv.slice(2));
+import alias from './commands/alias.js';
+import roll from './commands/roll.js';
+import pkgJson from './package.json' assert { type: 'json' };
 
-function runCommand(command) {
-  try {
-    require('./sub/' + command)(argv);
-  } catch (e) {
-    console.error('Error: did not recognize options ' + JSON.stringify(argv));
-    require('./sub/help')();
-  }
-}
+const program = new Command();
 
-var command = argv._[0];
-if (argv.h || argv.help || command === 'help') {
-  require('./sub/help')(argv);
-} else {
-  // Help must not use lib or config to keep diagnostic information even if we get into a bad state (deleted config,
-  // uninstalled dependencies, &c)
-  var config = require('./lib/config');
+program
+  .name('dnd-roller')
+  .description('A CLI tool for rolling dice.')
+  .version(pkgJson.version);
 
-  if (command === 'init') {
-    require('./sub/init')(function () { });
-  } else if (!config.isValid()) {
-    console.error("There's a problem with your config; running dnd init to set up config");
-    require('./sub/init')(function () {
-      runCommand(command);
-    });
-  } else {
-    runCommand(command);
-  }
-}
+program.command('alias', { isDefault: false })
+  .description('Create an alias for a dice roll')
+  .argument('<name>', 'the name of the alias')
+  .argument('<roll>', 'the dice roll to alias')
+  .option('--config-path', 'an alternate path to the config file', '~/.dnd-roller')
+  .action(alias);
+
+program.command('roll', { isDefault: true })
+  .description('Roll some dice')
+  .argument('[dice]', 'dice to roll', '1d20')
+  .option('--config-path', 'an alternate path to the config file', '~/.dnd-roller')
+  .action(roll);
+
+program.parse();
