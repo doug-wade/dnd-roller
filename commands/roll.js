@@ -12,8 +12,10 @@ export default function roll(rollCommand, { configPath }) {
 
   let result;
   if (userConfig.aliases[rollCommand]) {
+    console.log(`rolling ${userConfig.aliases[rollCommand]}`)
     result = dice.roll(userConfig.aliases[rollCommand]);
   } else {
+    console.log(`rolling ${rollCommand}`)
     result = dice.roll(rollCommand);
   }
 

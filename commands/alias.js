@@ -12,5 +12,5 @@ export default function (name, roll, { configPath }) {
   userConfig.aliases = userConfig.aliases || {};
   userConfig.aliases[name] = roll;
   configManager.saveConfig(configPath, userConfig);
-  console.log('successfully created alias!');
+  console.log(`successfully created alias ${name}!`);
 };
