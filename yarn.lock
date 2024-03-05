@@ -7,10 +7,10 @@ commander@^12.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-12.0.0.tgz#b929db6df8546080adfd004ab215ed48cf6f2592"
   integrity sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==
 
-dice.js@^0.9.0:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/dice.js/-/dice.js-0.9.3.tgz#ca257e1c7d2df040aa68153befff480f0c3b4592"
-  integrity sha512-ZKAeI2BQjw6E7vg53UxGIkl899BTjoVvOkxHRQn0kmt4nIYDGhGf5GfjWDXXV0nmWXZz/dIKe4xT/QpY0kQsbw==
+dice.js@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dice.js/-/dice.js-2.0.0.tgz#fcc5ec68f3f2ae83a9ba12f775d7884b26440fd1"
+  integrity sha512-KREJPJpPNxx0RhLhqLU4QgMZT5hvdv7Ww6ONO1HB7nIICTm69nGyxCi2bAaKC5KZyhjPYi3KPSPJiV1Mx60wEQ==
 
 mkdirp@^3.0.1:
   version "3.0.1"
